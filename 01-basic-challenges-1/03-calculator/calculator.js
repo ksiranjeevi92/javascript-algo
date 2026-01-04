@@ -8,9 +8,10 @@ function calculator(num1, num2, operator) {
     case "*":
       return (result = num1 * num2);
     case "/":
+      if (num2 == 0) throw new Error("Divisio by zero ");
       return (result = num1 / num2);
     default:
-      throw new Error();
+      throw new Error("Invalid Operator");
   }
 }
 
