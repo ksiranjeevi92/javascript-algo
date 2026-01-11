@@ -1,3 +1,13 @@
-function countVowels() {}
+function countVowels(input) {
+  let vowels = new Set(["a", "e", "i", "o", "u"]);
+  let count = 0;
+
+  for (let char of input.toLowerCase()) {
+    if (vowels.has(char)) {
+      count++;
+    }
+  }
+  return count;
+}
 
 module.exports = countVowels;
